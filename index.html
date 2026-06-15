@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ark Creations is a creative digital agency offering web development, UI/UX design, branding, video editing, digital marketing, and growth-focused creative solutions." />
+  <meta name="keywords" content="Ark Creations, digital agency, web development, UI UX design, branding, SEO, video production, social media marketing" />
+  <meta name="author" content="Ark Creations" />
+  <meta property="og:title" content="Ark Creations | Creative Digital Agency" />
+  <meta property="og:description" content="Premium web, design, branding, video, and marketing solutions for ambitious brands." />
+  <meta property="og:type" content="website" />
+  <title>Ark Creations | Creative Digital Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'sans-serif']
+          },
+          colors: {
+            ink: '#111827',
+            cloud: '#f7fafc',
+            coral: '#ff6b5f',
+            mint: '#31c7a9',
+            amber: '#f5b84b',
+            ocean: '#2563eb'
+          },
+          boxShadow: {
+            soft: '0 24px 80px rgba(17, 24, 39, 0.12)',
+            glow: '0 20px 60px rgba(49, 199, 169, 0.24)'
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            pulseSoft: 'pulseSoft 2.4s ease-in-out infinite',
+            scroll: 'scroll 1.7s ease-in-out infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-18px)' }
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '0.35', transform: 'scale(1)' },
+              '50%': { opacity: '0.75', transform: 'scale(1.06)' }
+            },
+            scroll: {
+              '0%': { transform: 'translateY(0)', opacity: '0' },
+              '45%': { opacity: '1' },
+              '100%': { transform: 'translateY(16px)', opacity: '0' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-cloud text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-900">Skip to content</a>
+
+  <div id="loader" class="fixed inset-0 z-[100] grid place-items-center bg-slate-950 text-white">
+    <div class="text-center">
+      <div class="mx-auto mb-5 h-14 w-14 rounded-2xl bg-gradient-to-br from-coral via-amber to-mint p-1 animate-pulseSoft">
+        <div class="grid h-full w-full place-items-center rounded-[0.9rem] bg-slate-950 font-black">A</div>
+      </div>
+      <p class="text-sm font-semibold tracking-[0.35em] text-slate-300">ARK CREATIONS</p>
+    </div>
+  </div>
+
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/75 backdrop-blur-xl transition-all dark:bg-slate-950/70">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <a href="#home" class="flex items-center gap-3" aria-label="Ark Creations home">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-coral via-amber to-mint text-base font-black text-white shadow-glow">A</span>
+        <span class="text-lg font-black tracking-tight">Ark Creations</span>
+      </a>
+      <div class="hidden items-center gap-7 lg:flex">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#testimonials">Testimonials</a>
+        <a class="nav-link" href="#blog">Blog</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode"></button>
+        <button id="searchToggle" class="icon-btn" type="button" aria-label="Open site search"></button>
+        <button id="menuToggle" class="icon-btn lg:hidden" type="button" aria-label="Open mobile menu" aria-expanded="false"></button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white px-4 py-4 shadow-soft dark:border-slate-800 dark:bg-slate-950 lg:hidden">
+      <div class="grid gap-2">
+        <a class="mobile-link" href="#home">Home</a>
+        <a class="mobile-link" href="#about">About</a>
+        <a class="mobile-link" href="#services">Services</a>
+        <a class="mobile-link" href="#portfolio">Portfolio</a>
+        <a class="mobile-link" href="#testimonials">Testimonials</a>
+        <a class="mobile-link" href="#blog">Blog</a>
+        <a class="mobile-link" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="relative flex min-h-screen items-center overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(49,199,169,0.22),transparent_30%),linear-gradient(135deg,#0f172a_0%,#16354f_45%,#13251f_100%)] px-4 pb-20 pt-32 text-white sm:px-6 lg:px-8">
+      <div class="absolute inset-0 opacity-25" style="background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 56px 56px;"></div>
+      <div class="absolute right-0 top-24 h-72 w-72 rounded-full bg-coral/20 blur-3xl"></div>
+      <div class="absolute bottom-16 left-8 h-72 w-72 rounded-full bg-mint/20 blur-3xl"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
+        <div class="reveal">
+          <p class="mb-5 inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-mint backdrop-blur">Creative Digital Agency</p>
+          <h1 class="max-w-4xl text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Build a brand that moves with <span id="typedText" class="gradient-text">clarity</span></h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Ark Creations designs high-performing websites, identities, campaigns, and content systems for brands that need strategy and craft in the same room.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#contact" class="btn-primary">Get Started</a>
+            <a href="#portfolio" class="btn-secondary">View Portfolio</a>
+          </div>
+          <div class="mt-10 grid max-w-xl grid-cols-3 gap-3 text-center">
+            <div class="glass-tile"><strong>98%</strong><span>Retention</span></div>
+            <div class="glass-tile"><strong>4.9</strong><span>Rating</span></div>
+            <div class="glass-tile"><strong>24/7</strong><span>Support</span></div>
+          </div>
+        </div>
+        <div class="relative reveal">
+          <div class="hero-visual animate-float">
+            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80" alt="Creative agency team collaborating around a laptop" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/15 bg-white/12 p-5 backdrop-blur-xl">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm text-slate-200">Campaign velocity</p>
+                  <p class="text-3xl font-black">+184%</p>
+                </div>
+                <div class="h-14 w-14 rounded-2xl bg-mint/25 p-3" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" class="h-full w-full fill-none stroke-mint stroke-2"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 14 4-4 3 3 5-6"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full border border-white/20 p-3" aria-label="Scroll to about section">
+        <span class="block h-8 w-5 rounded-full border border-white/50 p-1"><span class="mx-auto block h-2 w-1 rounded-full bg-white animate-scroll"></span></span>
+      </a>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">About Ark</p>
+        <h2>Ideas shaped into measurable digital momentum.</h2>
+        <p>We combine brand strategy, design systems, production craft, and performance marketing to create experiences that look sharp and work hard.</p>
+      </div>
+      <div class="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+        <article class="panel reveal lg:col-span-1">
+          <h3 class="mb-4 text-2xl font-black">Company Introduction</h3>
+          <p class="leading-8 text-slate-600 dark:text-slate-300">Ark Creations is a multidisciplinary creative agency built for modern brands. Our team partners with founders, product teams, and marketing leaders to launch digital products, sharpen identity systems, and turn attention into conversion.</p>
+        </article>
+        <article class="panel reveal">
+          <div class="mb-4 h-12 w-12 rounded-2xl bg-coral/15 p-3 text-coral" data-icon="target"></div>
+          <h3 class="mb-3 text-xl font-black">Mission</h3>
+          <p class="text-slate-600 dark:text-slate-300">Create accessible, beautiful, and performance-led digital work that helps ambitious teams grow with confidence.</p>
+        </article>
+        <article class="panel reveal">
+          <div class="mb-4 h-12 w-12 rounded-2xl bg-mint/15 p-3 text-mint" data-icon="spark"></div>
+          <h3 class="mb-3 text-xl font-black">Vision</h3>
+          <p class="text-slate-600 dark:text-slate-300">Become the creative partner known for turning complex business goals into elegant digital experiences.</p>
+        </article>
+      </div>
+      <div class="mx-auto mt-8 grid max-w-7xl gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div class="stat-card reveal"><span data-count="320">0</span><p>Projects Completed</p></div>
+        <div class="stat-card reveal"><span data-count="145">0</span><p>Happy Clients</p></div>
+        <div class="stat-card reveal"><span data-count="8">0</span><p>Years Experience</p></div>
+        <div class="stat-card reveal"><span data-count="26">0</span><p>Team Members</p></div>
+      </div>
+    </section>
+
+    <section id="services" class="section bg-white dark:bg-slate-900/40">
+      <div class="section-head reveal">
+        <p class="eyebrow">Services</p>
+        <h2>Strategy, design, code, and content under one roof.</h2>
+        <p>Every service card below is rendered dynamically from JavaScript data for easier scaling.</p>
+      </div>
+      <div id="servicesGrid" class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8"></div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Selected launches, identities, and campaigns.</h2>
+        <p>Filter by discipline and preview the work in a lightbox.</p>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div id="portfolioFilters" class="mb-8 flex flex-wrap justify-center gap-3"></div>
+        <div id="portfolioGrid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section id="why" class="section relative overflow-hidden bg-slate-950 text-white">
+      <div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(circle at 20% 20%, rgba(255,107,95,.35), transparent 28%), radial-gradient(circle at 80% 10%, rgba(49,199,169,.28), transparent 30%);"></div>
+      <div class="section-head relative reveal">
+        <p class="eyebrow">Why Choose Us</p>
+        <h2>Designed for quality, speed, and lasting systems.</h2>
+        <p class="text-slate-300">Our process keeps the creative work ambitious while making delivery predictable.</p>
+      </div>
+      <div class="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div id="timeline" class="space-y-5"></div>
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div class="glass-card reveal"><h3>Conversion Thinking</h3><p>Every visual decision is tied to user intent, trust, and action.</p></div>
+          <div class="glass-card reveal"><h3>Scalable Systems</h3><p>We build reusable design and content patterns for long-term growth.</p></div>
+          <div class="glass-card reveal"><h3>Transparent Delivery</h3><p>Clear timelines, visible progress, and focused collaboration rituals.</p></div>
+          <div class="glass-card reveal"><h3>Accessible Craft</h3><p>Readable layouts, keyboard-friendly interfaces, and inclusive defaults.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section bg-white dark:bg-slate-900/40">
+      <div class="section-head reveal">
+        <p class="eyebrow">Team</p>
+        <h2>Specialists who care about the details.</h2>
+        <p>Dynamic team cards are generated from JavaScript object data.</p>
+      </div>
+      <div id="teamGrid" class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8"></div>
+    </section>
+
+    <section id="testimonials" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Testimonials</p>
+        <h2>Clients trust us with brand-critical work.</h2>
+      </div>
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft dark:border-slate-800 dark:bg-slate-900">
+          <div id="testimonialTrack" class="flex transition-transform duration-700 ease-out"></div>
+          <div id="testimonialDots" class="flex justify-center gap-2 pb-7"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section bg-white dark:bg-slate-900/40">
+      <div class="section-head reveal">
+        <p class="eyebrow">Blog</p>
+        <h2>Notes on design, growth, and digital craft.</h2>
+      </div>
+      <div id="blogGrid" class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 lg:grid-cols-3 lg:px-8"></div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pricing</p>
+        <h2>Flexible packages for every growth stage.</h2>
+        <div class="mt-6 inline-flex rounded-full border border-slate-200 bg-white p-1 shadow-sm dark:border-slate-800 dark:bg-slate-900" aria-label="Pricing period">
+          <button id="monthlyBtn" class="toggle-pill active" type="button">Monthly</button>
+          <button id="yearlyBtn" class="toggle-pill" type="button">Yearly</button>
+        </div>
+      </div>
+      <div id="pricingGrid" class="mx-auto grid max-w-7xl gap-5 px-4 sm:px-6 lg:grid-cols-3 lg:px-8"></div>
+    </section>
+
+    <section id="faq" class="section bg-white dark:bg-slate-900/40">
+      <div class="section-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>Clear answers before we begin.</h2>
+      </div>
+      <div id="faqList" class="mx-auto max-w-3xl space-y-3 px-4 sm:px-6 lg:px-8"></div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 class="mb-5 text-4xl font-black tracking-tight sm:text-5xl">Ready to build something sharper?</h2>
+          <p class="mb-8 text-lg leading-8 text-slate-600 dark:text-slate-300">Tell us what you are planning. We will respond with next steps, timeline guidance, and the right service path.</p>
+          <div class="space-y-4">
+            <div class="contact-line" data-icon="mail">hello@arkcreations.studio</div>
+            <div class="contact-line" data-icon="phone">+91 9455918878</div>
+            <div class="contact-line" data-icon="pin">Remote-first agency serving global teams</div>
+          </div>
+        </div>
+        <form id="contactForm" class="panel reveal" novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="field">Name<input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" /></label>
+            <label class="field">Email<input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+          </div>
+          <label class="field mt-5">Phone<input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+1 555 000 0000" /></label>
+          <label class="field mt-5">Message<textarea id="message" name="message" rows="5" required placeholder="Tell us about your goals"></textarea></label>
+          <button class="btn-primary mt-6 w-full justify-center" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 px-4 py-12 text-white sm:px-6 lg:px-8">
+    <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.3fr_0.7fr_0.8fr]">
+      <div>
+        <div class="mb-4 flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-coral via-amber to-mint font-black">A</span><span class="text-xl font-black">Ark Creations</span></div>
+        <p class="max-w-md text-slate-300">A creative digital agency for web development, UI/UX, branding, video, and marketing systems that help brands move faster.</p>
+        <div class="mt-5 flex gap-3" id="footerSocials"></div>
+      </div>
+      <div>
+        <h3 class="mb-4 font-black">Quick Links</h3>
+        <div class="grid gap-2 text-slate-300">
+          <a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+      <form id="newsletterForm">
+        <h3 class="mb-4 font-black">Newsletter</h3>
+        <p class="mb-4 text-sm text-slate-300">Monthly ideas on design, marketing, and digital launches.</p>
+        <div class="flex overflow-hidden rounded-2xl border border-white/10 bg-white/10">
+          <input class="min-w-0 flex-1 bg-transparent px-4 py-3 text-sm outline-none placeholder:text-slate-400" type="email" required placeholder="Email address" aria-label="Email address" />
+          <button class="bg-mint px-5 text-sm font-black text-slate-950" type="submit">Join</button>
+        </div>
+      </form>
+    </div>
+    <div class="mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+      <p>Copyright <span id="year"></span> Ark Creations. All rights reserved.</p>
+      <p>Built with HTML5, Tailwind CSS, and vanilla JavaScript.</p>
+    </div>
+  </footer>
+
+  <div id="modal" class="fixed inset-0 z-[80] hidden items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="max-h-[86vh] w-full max-w-2xl overflow-auto rounded-3xl bg-white p-6 shadow-soft dark:bg-slate-900">
+      <div class="mb-5 flex items-start justify-between gap-4">
+        <div><p id="modalTag" class="eyebrow mb-2"></p><h2 id="modalTitle" class="text-2xl font-black"></h2></div>
+        <button id="modalClose" class="icon-btn" type="button" aria-label="Close modal"></button>
+      </div>
+      <div id="modalBody" class="leading-8 text-slate-600 dark:text-slate-300"></div>
+    </div>
+  </div>
+
+  <div id="lightbox" class="fixed inset-0 z-[90] hidden items-center justify-center bg-slate-950/85 p-4" role="dialog" aria-modal="true" aria-label="Portfolio image preview">
+    <button id="lightboxClose" class="absolute right-5 top-5 rounded-full bg-white/10 p-3 text-white backdrop-blur" type="button" aria-label="Close image preview"></button>
+    <img id="lightboxImage" class="max-h-[82vh] w-full max-w-5xl rounded-3xl object-cover shadow-soft" alt="" />
+  </div>
+
+  <div id="searchOverlay" class="fixed inset-0 z-[85] hidden bg-slate-950/75 p-4 backdrop-blur-sm">
+    <div class="mx-auto mt-24 max-w-2xl rounded-3xl bg-white p-5 shadow-soft dark:bg-slate-900">
+      <div class="flex items-center gap-3">
+        <input id="searchInput" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none focus:border-mint dark:border-slate-700 dark:bg-slate-950" type="search" placeholder="Search services, portfolio, blog..." aria-label="Search website content" />
+        <button id="searchClose" class="icon-btn shrink-0" type="button" aria-label="Close search"></button>
+      </div>
+      <div id="searchResults" class="mt-4 max-h-80 overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 z-[95] hidden -translate-x-1/2 rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white shadow-soft dark:bg-white dark:text-slate-950"></div>
+  <button id="backToTop" class="fixed bottom-6 right-6 z-40 hidden rounded-full bg-slate-950 p-4 text-white shadow-soft transition hover:-translate-y-1 dark:bg-white dark:text-slate-950" type="button" aria-label="Back to top"></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
